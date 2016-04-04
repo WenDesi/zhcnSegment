@@ -11,9 +11,9 @@ if __name__ == '__main__':
     print(", ".join(seg_list))
 
     # 精确分词， 去出停用词
-    # seg_list = wds.cut("他来到了网易杭研大厦")
-    # # 来到, 网易, 杭研, 大厦
-    # print(", ".join(seg_list))
+    seg_list = wds.cut("他来到了网易杭研大厦")
+    # 来到, 网易, 杭研, 大厦
+    print(", ".join(seg_list))
 
     # 搜索引擎分词
     seg_list = wds.cut_for_search("小明硕士毕业于中国科学院计算所，后在日本京都大学深造",False)
