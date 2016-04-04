@@ -30,3 +30,14 @@ class Seg(object):
             results.append(seg)
 
         return results
+
+    def cut_for_search(self,sentence,stopword=True):
+        seg_list = jieba.cut_for_search(sentence)
+
+        results = []
+        for seg in seg_list:
+            if seg in self.stopwords and stopword:
+                continue
+            results.append(seg)
+
+        return results
