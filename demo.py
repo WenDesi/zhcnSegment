@@ -10,6 +10,12 @@ if __name__ == '__main__':
     # 他, 来到, 了, 网易, 杭研, 大厦
     print(", ".join(seg_list))
 
+    # 加入用户词典,用户词典中有 ‘网易杭研大厦’
+    wds.load_userdict("userdict//userdict.txt")
+    seg_list = wds.cut("他来到了网易杭研大厦",False)
+    # 他, 来到, 了, 网易杭研大厦
+    print(", ".join(seg_list))
+
     # 精确分词， 去出停用词
     seg_list = wds.cut("他来到了网易杭研大厦")
     # 来到, 网易, 杭研, 大厦
